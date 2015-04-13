@@ -1,0 +1,83 @@
+SegFilt version 1.0
+=======================
+
+NAME:
+
+SEG Filter
+
+
+DESCRIPTION:
+
+
+This is a c++ implementation for SEG program written by Wootton and Federhen aimed for for identifying and masking segments of low
+complexity in amino acid sequences. 
+
+
+
+SYNOPSIS:
+    
+    #include<string>
+    #include<SegFilt.hpp>
+
+    string ProtSeq = "VGRGVQIGSPHHHHHHHHHHPQPATYQTSGNLGVSYSHSSCGPSYGSQNFSAPYSPYALNQEADVSGGYPQCAPAVYSGNLSSPMVQHHHHHQGYAGGAVGSPQYIHHSYGQEHQSLALATYN";
+
+/* Make object */
+
+    /* Construction */
+    SEG<int> seg;
+    /*  OR  */
+    SEG<int> seg(arg); // arg is : unordered_map<string, int|long|unsigned|double>
+
+
+/*  Functions */
+
+
+    string mask = seg.SegFilt(ProtSeq);   
+    //mask =  VGRGVQIGSPxxxxxxxxxxPQPATYQTSGNLGVSYSHSSCGPSYGSQNFSAPYSPYALNQEADVSGGYPQCAPAVYSGNLSSPMVxxxxxxxGYAGGAVGSPQYIHHSYGQEHQSLALATYN
+
+
+
+
+
+
+
+CONSTRUCTION AND RUNTIME COMPLEXITY:
+
+
+     -
+
+
+ACKNOWLEDGMENTS:
+
+     
+Wootton, J. C. and S. Federhen (1993).  Statistics of local complexity in amino
+acid sequences and sequence databases.  Computers and Chemistry 17:149-163.
+
+Vakatov D, editor. The NCBI C++ Toolkit Book. Bethesda (MD): National Center for 
+Biotechnology Information (US); 2004-. 
+Available from: http://www.ncbi.nlm.nih.gov/toolkit/doc/book/ch_getcode_svn
+
+
+AUTHOR:
+
+Robert Bakaric <rbakaric@irb.hr>, <bakaric@evolbio.mpg.de>
+
+COPYRIGHT AND LICENSE:
+
+ * Copyright 2015 Robert Bakaric
+ * 
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+ * MA 02110-1301, USA.
+
