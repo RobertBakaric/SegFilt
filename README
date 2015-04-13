@@ -9,7 +9,7 @@ SEG Filter
 DESCRIPTION:
 
 
-This is a c++ implementation for SEG program written by Wootton and Federhen aimed for for identifying and masking segments of low
+This is a c++ implementation of SEG program written by Wootton and Federhen made for identifying and masking segments of low
 complexity in amino acid sequences. 
 
 
